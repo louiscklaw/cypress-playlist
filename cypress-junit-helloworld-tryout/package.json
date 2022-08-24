@@ -1,12 +1,12 @@
 {
-  "name": "cypress-desktop",
+  "name": "cypress-junit-helloworld-tryout",
   "version": "1.0.0",
   "description": "### Overview",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker_rebuild": "docker compose up -d --build",
-    "into_cy_chrome": "docker compose exec -it cy_chrome_dev bash"
+    "into_cy_chrome": "docker compose run -t cy_chrome cypress run"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/piopi/cypress-desktop#readme",
   "dependencies": {
-    "cypress-mochawesome-reporter": "^3.2.2"
+    "cypress": "^10.6.0"
   }
 }
