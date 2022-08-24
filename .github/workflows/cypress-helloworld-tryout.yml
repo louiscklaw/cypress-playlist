@@ -3,19 +3,6 @@ name: master-cypress-helloworld-tryout
 on:
   push:
     branches: [master]
-#   pull_request:
-#     branches: [main]
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - uses: actions/checkout@v2
-#       - name: Build the Docker image
-#         run: |
-#           docker build base/main/ --file base/main/Dockerfile --tag base:$(date +%s)
-#           docker build browsers/main/ --file browsers/main/Dockerfile --tag all:$(date +%s)
 
 jobs:
   build:
