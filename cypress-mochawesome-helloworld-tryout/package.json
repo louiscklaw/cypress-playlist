@@ -4,7 +4,7 @@
   "description": "### Overview",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx cypress run",
     "docker_rebuild": "docker compose up -d --build",
     "into_cy_chrome": "docker compose run -t cy_chrome cypress run"
   },
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/piopi/cypress-desktop#readme",
   "dependencies": {
-    "cypress": "^10.6.0"
+    "cypress": "^10.6.0",
+    "mochawesome": "^7.1.3"
   }
 }
