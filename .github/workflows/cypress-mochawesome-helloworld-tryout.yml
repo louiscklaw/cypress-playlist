@@ -14,7 +14,6 @@ jobs:
             npm i
             npx cypress run
           cd ..
-          ls -l cypress-mochawesome-helloworld-tryout/mochawesome-report
 
       - uses: actions/upload-artifact@v2 # upload test results
         if: success() || failure() # run this step even if previous step failed
