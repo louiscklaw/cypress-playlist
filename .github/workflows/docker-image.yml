@@ -23,7 +23,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Build the Docker image
+      - name: test using docker compose
         run: |
-          docker compose up -d 
-          docker compose exec -it cy_chrome cypress run
+          cd cypress-helloworld-tryout
+            docker compose up -d 
+            docker compose exec -it cy_chrome cypress run
+          cd ..
