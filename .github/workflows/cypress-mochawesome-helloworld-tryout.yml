@@ -19,4 +19,4 @@ jobs:
         if: success() || failure() # run this step even if previous step failed
         with:
           name: test-results
-          path: cypress-mochawesome-helloworld-tryout/mochawesome-report/*.json
+          path: cypress-mochawesome-helloworld-tryout/cypress/results/*.json
