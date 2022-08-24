@@ -21,6 +21,8 @@
   "homepage": "https://github.com/piopi/cypress-desktop#readme",
   "dependencies": {
     "cypress": "^10.6.0",
-    "mochawesome": "^7.1.3"
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }

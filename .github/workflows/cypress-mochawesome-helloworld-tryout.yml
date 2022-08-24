@@ -1,4 +1,4 @@
-name: cypress-mochawesome-reporter-tryout
+name: cypress-mochawesome-helloworld-tryout
 
 on:
   push:
@@ -11,13 +11,14 @@ jobs:
       - uses: actions/checkout@v2
       - name: helloworld
         run: |
-          cd cypress-mochawesome-reporter-tryout
+          cd cypress-mochawesome-helloworld-tryout
             npm i
             npx cypress run
           cd ..
-          ls -l cypress-mochawesome-reporter-tryout/mochawesome-report
+          ls -l cypress-mochawesome-helloworld-tryout/mochawesome-report
+
       - uses: actions/upload-artifact@v2 # upload test results
         if: success() || failure() # run this step even if previous step failed
         with:
           name: test-results
-          path: cypress-mochawesome-reporter-tryout/mochawesome-report/*.json
+          path: cypress-mochawesome-helloworld-tryout/mochawesome-report/*.json

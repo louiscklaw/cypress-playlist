@@ -1,7 +1,7 @@
 name: 'Test Report'
 on:
   workflow_run:
-    workflows: ['cypress-mochawesome-reporter-tryout'] # runs after CI workflow
+    workflows: ['cypress-mochawesome-helloworld-tryout'] # runs after CI workflow
     types:
       - completed
 jobs:
