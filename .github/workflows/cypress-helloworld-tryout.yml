@@ -1,4 +1,4 @@
-name: master-cypress-helloworld-tryout
+name: cypress-helloworld-tryout
 
 on:
   push:
