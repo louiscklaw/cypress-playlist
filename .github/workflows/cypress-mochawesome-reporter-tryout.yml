@@ -16,11 +16,11 @@ jobs:
             npx cypress run
           cd ..
           ls -l cypress-mochawesome-reporter-tryout/mochawesome-report
-      # - uses: actions/upload-artifact@v2 # upload test results
-      #   if: success() || failure() # run this step even if previous step failed
-      #   with:
-      #     name: test-results
-      #     path: cypress-mochawesome-reporter-tryout/mochawesome-report/mochawesome.json
+      - uses: actions/upload-artifact@v2 # upload test results
+        if: success() || failure() # run this step even if previous step failed
+        with:
+          name: test-results
+          path: cypress-mochawesome-reporter-tryout/mochawesome-report/mochawesome.json
 
       - uses: dorny/test-reporter@v1
         with:
