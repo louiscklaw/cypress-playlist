@@ -2,7 +2,6 @@ name: cypress-mochawesome-helloworld-tryout
 
 on:
   push:
-    branches: [master]
 
 jobs:
   build:
