@@ -20,9 +20,6 @@
   },
   "homepage": "https://github.com/piopi/cypress-desktop#readme",
   "dependencies": {
-    "cypress": "^10.6.0"
-  },
-  "devDependencies": {
     "cypress-mochawesome-reporter": "^3.2.2"
   }
 }
