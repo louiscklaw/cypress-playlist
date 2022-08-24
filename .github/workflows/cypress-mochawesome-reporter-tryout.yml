@@ -15,6 +15,7 @@ jobs:
             npm i
             npx cypress run
           cd ..
+          ls -l cypress-mochawesome-reporter-tryout/mochawesome-report
       # - uses: actions/upload-artifact@v2 # upload test results
       #   if: success() || failure() # run this step even if previous step failed
       #   with:
@@ -25,5 +26,5 @@ jobs:
         with:
           artifact: test-results # artifact name
           name: JEST Tests # Name of the check run which will be created
-          path: 'cypress-mochawesome-reporter-tryout/mochawesome-report/mochawesome.json' # Path to test results (inside artifact .zip)
+          path: 'cypress-mochawesome-reporter-tryout/mochawesome-report/*.json' # Path to test results (inside artifact .zip)
           reporter: mocha-json # Format of test results
