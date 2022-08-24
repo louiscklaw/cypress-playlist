@@ -6,3 +6,11 @@ services:
     volumes:
       - ./cypress:/cypress
       - ./cypress.json:/cypress.json
+
+  cy_chrome_dev:
+    image: node:16-buster
+    user: 1000:1000
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: sleep infinity
