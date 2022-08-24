@@ -20,7 +20,7 @@ jobs:
         if: success() || failure() # run this step even if previous step failed
         with:
           name: test-results
-          path: cypress-mochawesome-reporter-tryout/mochawesome-report/mochawesome.json
+          path: cypress-mochawesome-reporter-tryout/mochawesome-report/*.json
 
       - uses: dorny/test-reporter@v1
         with:
