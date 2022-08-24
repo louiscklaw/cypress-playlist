@@ -3,7 +3,7 @@ context('Actions', () => {
     cy.visit('https://example.cypress.io/commands/actions')
   })
 
-  it('.type() - type into a DOM element', () => {
-    cy.log('.action-email')
+  it('helloworld cypress', () => {
+    cy.log('helloworld')
   })
 })
