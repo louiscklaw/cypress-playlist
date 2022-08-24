@@ -20,9 +20,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: test using docker compose
         run: |
-          hostname
+          cd cypress-helloworld-tryout
+            npm run into_cy_chrome
+          cd ..
