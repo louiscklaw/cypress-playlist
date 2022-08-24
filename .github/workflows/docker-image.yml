@@ -17,7 +17,6 @@ on:
 #           docker build base/main/ --file base/main/Dockerfile --tag base:$(date +%s)
 #           docker build browsers/main/ --file browsers/main/Dockerfile --tag all:$(date +%s)
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,7 +24,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the Docker image
-      run: |
-        docker compose up -d 
-        docker compose exec -it cy_chrome cypress run
-        
+        run: |
+          docker compose up -d 
+          docker compose exec -it cy_chrome cypress run
