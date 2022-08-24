@@ -12,5 +12,11 @@ jobs:
       - name: helloworld
         run: |
           cd cypress-mochawesome-reporter-tryout
-            npm run into_cy_chrome
+            npm i
+            npx cypress run
           cd ..
+      - uses: actions/upload-artifact@v2 # upload test results
+        if: success() || failure() # run this step even if previous step failed
+        with:
+          name: test-results
+          path: cypress-mochawesome-reporter-tryout\mochawesome-report\mochawesome.json
