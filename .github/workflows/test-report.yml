@@ -2,7 +2,7 @@ name: 'Test Report'
 
 on:
   workflow_run:
-    workflows: ['cypress-mochawesome-helloworld-tryout'] # runs after CI workflow
+    workflows: ['cypress-mochawesome-helloworld-tryout', 'cypress-helloworld-tryout'] # runs after CI workflow
     types:
       - completed
 
@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: ping-dead-man-timer
         run: |
-          curl http://healthcheck.iamon99.com/ping/767db2f9-0846-4de1-a3c1-3b5796130bdf
+          curl -fsS -m 10 --retry 5 -o /dev/null http://healthcheck.iamon99.com/ping/767db2f9-0846-4de1-a3c1-3b5796130bdf
