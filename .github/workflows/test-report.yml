@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: ping-dead-man-timer
         run: |
-          curl -fsS -m 10 --retry 5 http://healthcheck.iamon99.com/ping/767db2f9-0846-4de1-a3c1-3b5796130bdf
+          wget http://healthcheck.iamon99.com/ping/767db2f9-0846-4de1-a3c1-3b5796130bdf -T 10 -t 5 -O /dev/null
