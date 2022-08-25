@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run",
+    "publish": "node ./publish.js",
     "docker_rebuild": "docker compose up -d --build",
     "into_cy_chrome": "docker compose run -t cy_chrome cypress run"
   },
@@ -21,6 +22,8 @@
   "homepage": "https://github.com/piopi/cypress-desktop#readme",
   "dependencies": {
     "cypress": "^10.6.0",
+    "cypress-mochawesome-reporter": "^3.2.2",
+    "gh-pages": "^4.0.0",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.2.0"

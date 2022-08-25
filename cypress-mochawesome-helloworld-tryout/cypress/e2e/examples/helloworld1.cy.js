@@ -1,4 +1,4 @@
-context('Actions', () => {
+context('Actions 2', () => {
   // beforeEach(() => {
   //   cy.visit('https://example.cypress.io/commands/actions')
   //   cy.screenshot()
@@ -51,7 +51,7 @@ context('Actions', () => {
   })
 })
 
-context('Actions 1', () => {
+context('Actions 3', () => {
   // beforeEach(() => {
   //   cy.visit('https://example.cypress.io/commands/actions')
   //   cy.screenshot()
