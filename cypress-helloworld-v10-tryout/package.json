@@ -1,0 +1,24 @@
+{
+  "name": "cypress-desktop",
+  "version": "1.0.0",
+  "description": "### Overview",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:dev": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piopi/cypress-desktop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piopi/cypress-desktop/issues"
+  },
+  "homepage": "https://github.com/piopi/cypress-desktop#readme",
+  "dependencies": {
+    "cypress": "^10.6.0"
+  }
+}
