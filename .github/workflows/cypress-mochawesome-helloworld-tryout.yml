@@ -12,11 +12,12 @@ jobs:
         run: |
           cd cypress-mochawesome-helloworld-tryout
             npm i
-            npx cypress run
+            npm run test
+            npm run publish
           cd ..
 
       - uses: actions/upload-artifact@v2 # upload test results
-        if: success() || failure() # run this step even if previous step failed
+        if: failure() # run this step even if previous step failed
         with:
-          name: test-results
-          path: cypress-mochawesome-helloworld-tryout/cypress/results/*.json
+          name: failure-screenshots
+          path: cypress-mochawesome-helloworld-tryout/cypress/screenshots

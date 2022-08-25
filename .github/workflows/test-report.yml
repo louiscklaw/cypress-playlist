@@ -1,16 +1,15 @@
 name: 'Test Report'
+
 on:
   workflow_run:
     workflows: ['cypress-mochawesome-helloworld-tryout'] # runs after CI workflow
     types:
       - completed
+
 jobs:
   report:
     runs-on: ubuntu-latest
     steps:
-      - uses: phoenix-actions/test-reporting@v8
-        with:
-          artifact: test-results # artifact name
-          name: JEST Tests # Name of the check run which will be created
-          path: '*.json' # Path to test results (inside artifact .zip)
-          reporter: mocha-json # Format of test results
+      - uses: ping-dead-man-timer
+        run: |
+          curl http://healthcheck.iamon99.com/ping/767db2f9-0846-4de1-a3c1-3b5796130bdf
