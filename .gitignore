@@ -1,5 +1,6 @@
 **/node_modules
 **/mochawesome-report
+**/screenshots
 
 # Logs
 logs
