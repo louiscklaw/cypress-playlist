@@ -21,4 +21,6 @@ jobs:
         if: failure() || success()
         with:
           name: failure-videos
-          path: docker/included-with-plugins-xpath-tryout/src/cypress/videos
+          path: |
+            docker/included-with-plugins-xpath-tryout/src/cypress/videos
+            docker/included-with-plugins-xpath-tryout/src/cypress/screenshots
