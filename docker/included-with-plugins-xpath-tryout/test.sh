@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 set e+x
 
 echo "Running tests with additional locally installed Cypress plugins"
