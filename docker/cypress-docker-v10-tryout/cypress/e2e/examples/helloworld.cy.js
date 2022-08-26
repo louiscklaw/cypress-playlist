@@ -1,6 +1,6 @@
 context('Actions', () => {
   beforeEach(() => {
-    cy.visit('https://example.cypress.io/commands/actions')
+    cy.visit('http://www.example.com')
   })
 
   it('helloworld cypress', () => {

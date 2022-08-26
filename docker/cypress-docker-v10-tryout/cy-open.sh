@@ -20,6 +20,7 @@ DISPLAY=:0
 #     in our case they are "--project ." to point globally installed Cypress
 #     at the current working directory /e2e inside the container
 docker run -it \
+  -u 1000:1000 \
   -v $PWD:/e2e \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -w /e2e \
