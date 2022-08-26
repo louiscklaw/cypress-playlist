@@ -22,5 +22,5 @@ jobs:
         with:
           name: failure-screenshots
           path: |
-            docker\included-with-plugins-xpath-tryout\cypress\videos
-            docker\included-with-plugins-xpath-tryout\cypress\screenshots
+            docker\included-with-plugins-xpath-tryout\src\cypress\videos
+            docker\included-with-plugins-xpath-tryout\src\cypress\screenshots
