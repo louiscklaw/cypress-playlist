@@ -1,0 +1,28 @@
+name: 'merge-to-master'
+
+on:
+  workflow_run:
+    workflows:
+      - cypress-mochawesome-helloworld-tryout
+      - cypress-helloworld-tryout
+      - docker-cypress-v10-tryout
+    types:
+      - completed
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: wait success
+        uses: ahmadnassri/action-workflow-run-wait@v1
+
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: merge
+        if: ${{ !startsWith(github.ref, 'refs/heads/test/') }}
+        run: |
+          cd github-js-build-merger-tryout
+            npm i
+            node ./merge_to_master.js
+          cd ..
