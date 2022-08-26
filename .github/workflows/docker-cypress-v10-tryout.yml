@@ -13,3 +13,11 @@ jobs:
           cd docker/docker-cypress-v10-tryout
             npm run docker_run
           cd ..
+
+      - uses: actions/upload-artifact@v2 # upload test results
+        if: failure() # run this step even if previous step failed
+        with:
+          name: failure-screenshots
+          path: |
+            docker\docker-cypress-v10-tryout\cypress\videos
+            docker\docker-cypress-v10-tryout\cypress\screenshots
