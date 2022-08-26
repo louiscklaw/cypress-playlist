@@ -3,8 +3,6 @@ name: 'merge-to-master'
 on:
   workflow_run:
     workflows:
-      - cypress-mochawesome-helloworld-tryout
-      - cypress-helloworld-tryout
       - docker-cypress-v10-tryout
     types:
       - completed
