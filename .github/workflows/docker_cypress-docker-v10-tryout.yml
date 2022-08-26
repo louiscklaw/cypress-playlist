@@ -1,0 +1,23 @@
+name: docker_cypress-docker-v10-tryout
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: test docker
+        run: |
+          cd docker/docker-cypress-v10-tryout
+            ./cy-run.sh
+          cd ..
+
+      - uses: actions/upload-artifact@v2 # upload test results
+        # if: failure() # run this step even if previous step failed
+        with:
+          name: failure-screenshots
+          path: |
+            docker\docker-cypress-v10-tryout\cypress\videos
+            docker\docker-cypress-v10-tryout\cypress\screenshots
