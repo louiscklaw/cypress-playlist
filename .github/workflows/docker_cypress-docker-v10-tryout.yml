@@ -11,7 +11,7 @@ jobs:
       - name: test docker
         run: |
           cd docker/cypress-docker-v10-tryout
-            ./cy-run.sh
+            ./cy-run.sh --headed
           cd ..
 
       - uses: actions/upload-artifact@v2 # upload test results
