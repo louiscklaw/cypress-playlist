@@ -1,4 +1,4 @@
-name: cypress-docker-v10-tryout
+name: docker_cypress-docker-v10-tryout
 
 on:
   push:
