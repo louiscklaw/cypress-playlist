@@ -3,7 +3,8 @@ context('Actions', () => {
     cy.visit('https://www.carousell.com.hk')
   })
 
-  it('helloworld cypress', () => {
+  it('helloworld carousell', () => {
     cy.log('helloworld')
+    cy.screenshot()
   })
 })

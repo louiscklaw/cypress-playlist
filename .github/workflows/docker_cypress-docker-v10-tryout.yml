@@ -1,4 +1,4 @@
-name: docker-cypress-v10-tryout
+name: docker_cypress-docker-v10-tryout
 
 on:
   push:
@@ -10,8 +10,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: test docker
         run: |
-          cd docker/docker-cypress-v10-tryout
-            npm run docker_run
+          cd docker/cypress-docker-v10-tryout
+            ./cy-run.sh --headed
           cd ..
 
       - uses: actions/upload-artifact@v2 # upload test results
@@ -19,5 +19,5 @@ jobs:
         with:
           name: failure-screenshots
           path: |
-            docker\docker-cypress-v10-tryout\cypress\videos
-            docker\docker-cypress-v10-tryout\cypress\screenshots
+            docker\cypress-docker-v10-tryout\cypress\videos
+            docker\cypress-docker-v10-tryout\cypress\screenshots

@@ -1,7 +1,0 @@
-services:
-  cy_chrome:
-    image: 'cypress/included:10.4.0'
-    working_dir: /app
-    volumes:
-      - ./cypress:/app/cypress
-      - ./cypress.config.js:/app/cypress.config.js
