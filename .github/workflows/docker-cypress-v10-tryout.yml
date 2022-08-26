@@ -1,4 +1,4 @@
-name: cypress-helloworld-tryout
+name: docker-cypress-v10-tryout
 
 on:
   push:
@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: helloworld
+      - name: test docker
         run: |
-          cd cypress-helloworld-tryout
-            npm run into_cy_chrome
+          cd docker-cypress-v10-tryout
+            npm run docker_run
           cd ..
