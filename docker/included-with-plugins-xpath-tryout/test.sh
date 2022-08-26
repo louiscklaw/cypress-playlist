@@ -9,6 +9,5 @@ echo "cd src; npm install"
 # print the docker command before running
 set -x
 docker run -i \
-  -u 1000:1000 \
   -v $PWD/src:/test \
   -w /test cypress/included:10.6.0
