@@ -15,7 +15,7 @@ jobs:
               npm i -d
             cd ..
             bash ./test.sh
-          cd ..
+          cd ../..
 
       - uses: actions/upload-artifact@v2 # upload test results
         # if: failure() # run this step even if previous step failed
