@@ -1,6 +1,0 @@
-[submodule "docker/cypress-desktop"]
-	path = docker/cypress-desktop
-	url = git@github.com:louiscklaw/cypress-desktop.git
-[submodule "docker/cypress-docker-images"]
-	path = docker/cypress-docker-images
-	url = git@github.com:louiscklaw/cypress-docker-images.git
