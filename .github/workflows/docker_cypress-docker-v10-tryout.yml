@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: test docker
         run: |
-          cd docker/docker-cypress-v10-tryout
+          cd docker/cypress-docker-v10-tryout
             ./cy-run.sh
           cd ..
 
@@ -19,5 +19,5 @@ jobs:
         with:
           name: failure-screenshots
           path: |
-            docker\docker-cypress-v10-tryout\cypress\videos
-            docker\docker-cypress-v10-tryout\cypress\screenshots
+            docker\cypress-docker-v10-tryout\cypress\videos
+            docker\cypress-docker-v10-tryout\cypress\screenshots
