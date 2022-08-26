@@ -18,7 +18,7 @@ jobs:
           cd ../..
 
       - uses: actions/upload-artifact@v2 # upload test results
-        # if: failure() # run this step even if previous step failed
+        if: failure() || success()
         with:
           name: failure-videos
           path: docker\included-with-plugins-xpath-tryout\src\cypress\videos
