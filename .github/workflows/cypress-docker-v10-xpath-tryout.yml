@@ -16,8 +16,8 @@ jobs:
           cd ../..
 
 
-      - uses: actions/upload-artifact@v2 # upload test results
-        if: failure() # run this step even if previous step failed
+      - uses: actions/upload-artifact@v2
+        if: failure() || success() 
         with:
           name: failure-troubleshoot
           path: docker/cypress-docker-v10-xpath-tryout/cypress/screenshots
