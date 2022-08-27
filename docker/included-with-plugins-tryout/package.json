@@ -19,6 +19,8 @@
   "homepage": "https://github.com/bahmutov/demo-docker-cypress-included#readme",
   "devDependencies": {
     "axe-core": "4.1.1",
-    "cypress-axe": "0.12.0"
+    "cypress-axe": "0.12.0",
+    "@cypress/skip-test": "2.3.0",
+    "cypress-failed-log": "2.5.1"
   }
 }

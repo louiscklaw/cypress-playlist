@@ -11,6 +11,7 @@ jobs:
       - name: test docker
         run: |
           cd docker/included-with-plugins-tryout
+            npm i -d
             ./cy-run.sh --headed
           cd ..
 
