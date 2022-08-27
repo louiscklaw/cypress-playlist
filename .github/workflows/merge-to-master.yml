@@ -4,6 +4,7 @@ on:
   workflow_run:
     workflows:
       - docker_cypress-docker-v10-tryout
+      - docker_included-with-plugins-xpath-tryout
     types:
       - completed
 
