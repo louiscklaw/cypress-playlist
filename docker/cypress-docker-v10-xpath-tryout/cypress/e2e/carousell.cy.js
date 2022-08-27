@@ -42,7 +42,7 @@ describe('test xpath', () => {
     cy.viewport(1920, 1080 * 10);
     cy.log('helloworld done');
 
-    cy.xpath('.//*[@id="root"]');
+    cy.xpath('.//div');
 
     cy.screenshot();
   });
