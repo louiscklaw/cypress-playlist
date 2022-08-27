@@ -41,5 +41,7 @@ describe('test xpath', () => {
     cy.visit('http://www.carousell.com.hk');
     cy.viewport(1920, 1080 * 10);
     cy.log('helloworld done');
+
+    cy.screenshot();
   });
 });
