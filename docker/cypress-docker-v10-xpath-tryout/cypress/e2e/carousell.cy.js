@@ -7,17 +7,19 @@ describe('test xpath', { retries: { runMode: 3, openMode: 1 } }, () => {
 
     cy.xpath('(.//input[@placeholder="Search for an item"])[1]').type('3D 代客打印');
 
+    cy.intercept('/search/*').as('searchText');
     cy.xpath('(.//button[@data-testid="navbar-search-input-location-desktop-btn-search"])[1]').click();
-    cy.wait(500);
+    cy.wait('@searchText').then(interception => {
+      // we can now access the low level interception
+      // that contains the request body,
+      // response body, status, etc
+      cy.log('search done');
+    });
 
-    Array(8)
-      .fill(0)
-      .map((_, idx) => {
-        let el_idx = idx + 1;
-        // cy.xpath(`(.//div[(@data-testid!="listing-card") and starts-with(@data-testid,"listing-card")]/div/a)[${el_idx}]`).then($ele => {
-        //   cy.debug($ele.text());
-        // });
-      });
+    // #root > div > div > div.D_aiF.D_aiJ > div > div.D__Z > div > div > div.D_Ae > a
+    cy.get('main').then($el => {
+      cy.log($el.text());
+    });
 
     // cy.screenshot();
   });
