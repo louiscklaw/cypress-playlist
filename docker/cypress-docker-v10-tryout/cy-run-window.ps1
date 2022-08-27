@@ -13,7 +13,7 @@ echo "Running Cypress e2e tests headlessly without copying files"
 # set to "cypress run" by default
 docker run -t `
   -v ${PWD}:/e2e `
-  -w /e2e cypress/included:10.6.0 $args
+  -w /e2e cypress/included:10.6.0 --headed $args
 
 # if you need to restrict amount of memory or CPU power the
 # container can use, see

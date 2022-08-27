@@ -1,0 +1,6 @@
+context('Actions', () => {
+  it('helloworld cypress', () => {
+    cy.visit('http://www.example.com');
+    cy.log('helloworld');
+  });
+});
