@@ -19,58 +19,17 @@ describe('test xpath', { retries: { runMode: 3, openMode: 1 } }, () => {
     cy.wait(1000);
   });
 
-  it(`try search by 3D PLA`, () => {
-    cy.visit('https://www.carousell.com.hk');
-    cy.viewport(1920, 1080 * 1);
-
-    // #root > div > div > div.D_aiF.D_aiJ > div > div.D_jk > div.D_jm > div > form > div.D_or > div > div > div > input
-    cy.get('#root').get('input[placeholder="Search for an item"]').type('3D PLA');
-    cy.xpath('(.//button[@data-testid="navbar-search-input-location-desktop-btn-search"])[1]').click();
-
-    // // #root > div > div > div.D_aiF.D_aiJ > div > div.D__Z > div > div > div.D_Ae > a
-
-    let seller_list = cy.xpath(`(.//div[(@data-testid!="listing-card") and starts-with(@data-testid,"listing-card")])`, { timeout: 30 * 1000 });
-    seller_list.contains('louiscklaw');
-
-    // found with position
-    seller_list.each(($el, index, $list) => {
-      cy.debug(JSON.stringify({ index, text: $el.text() }));
-      if ($el.text().search(/louiscklaw/) > 0) {
-        expect(index).to.be.below(8);
-      }
-    });
-  });
-
-  it(`try search by 3D ABS`, () => {
-    cy.visit('https://www.carousell.com.hk');
-    cy.viewport(1920, 1080 * 1);
-
-    // #root > div > div > div.D_aiF.D_aiJ > div > div.D_jk > div.D_jm > div > form > div.D_or > div > div > div > input
-    cy.get('#root').get('input[placeholder="Search for an item"]').type('3D ABS');
-    cy.xpath('(.//button[@data-testid="navbar-search-input-location-desktop-btn-search"])[1]').click();
-
-    // // #root > div > div > div.D_aiF.D_aiJ > div > div.D__Z > div > div > div.D_Ae > a
-
-    let seller_list = cy.xpath(`(.//div[(@data-testid!="listing-card") and starts-with(@data-testid,"listing-card")])`, { timeout: 30 * 1000 });
-    seller_list.contains('louiscklaw');
-
-    // found with position
-    seller_list.each(($el, index, $list) => {
-      cy.debug(JSON.stringify({ index, text: $el.text() }));
-      if ($el.text().search(/louiscklaw/) > 0) {
-        expect(index).to.be.below(8);
-      }
-    });
-  });
-
   it(`try search by thingiverse`, () => {
     cy.visit('https://www.carousell.com.hk');
     cy.viewport(1920, 1080 * 1);
 
     // #root > div > div > div.D_aiF.D_aiJ > div > div.D_jk > div.D_jm > div > form > div.D_or > div > div > div > input
-    cy.get('#root').get('input[placeholder="Search for an item"]').type('thingiverse');
+    cy.get('#root', { timeout: 15 * 1000 })
+      // .get('input[placeholder="Search for an item"]')
+      .xpath('.//input[starts-with(@placeholder,"Search")][1]')
+      .type('thingiverse');
     cy.xpath('(.//button[@data-testid="navbar-search-input-location-desktop-btn-search"])[1]').click();
-
+    cy.wait(1000);
     // // #root > div > div > div.D_aiF.D_aiJ > div > div.D__Z > div > div > div.D_Ae > a
 
     let seller_list = cy.xpath(`(.//div[(@data-testid!="listing-card") and starts-with(@data-testid,"listing-card")])`, { timeout: 30 * 1000 });
