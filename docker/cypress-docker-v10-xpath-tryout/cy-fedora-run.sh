@@ -28,4 +28,4 @@ docker run -it \
   -w /e2e \
   -e DISPLAY \
   --entrypoint cypress \
-  cypress/included:10.6.0 run
+  cypress/included:10.6.0 run --headed
