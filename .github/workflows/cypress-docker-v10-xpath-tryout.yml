@@ -12,5 +12,5 @@ jobs:
         run: |
           cd docker/cypress-docker-v10-xpath-tryout
             npm i -d
-            ./cy-run.sh
+            ./cy-run.sh --headed
           cd ../..
