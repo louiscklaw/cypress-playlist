@@ -25,6 +25,8 @@ describe('test xpath', () => {
 
   beforeEach(() => {
     // runs before each test in the block
+    cy.clearCookies();
+    cy.clearLocalStorage();
   });
 
   afterEach(() => {
