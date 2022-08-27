@@ -1,1 +1,2 @@
-require("cypress-failed-log")
+require('cypress-failed-log')
+require('cypress-xpath')
