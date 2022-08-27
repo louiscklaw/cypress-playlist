@@ -11,16 +11,13 @@ jobs:
       - name: test docker
         run: |
           cd docker/included-with-plugins-xpath-tryout
-            cd src
-              npm i -d
-            cd ..
-            bash ./test.sh
-          cd ../..
+            ./cy-run.sh --headed
+          cd ..
 
       - uses: actions/upload-artifact@v2 # upload test results
-        if: failure() || success()
+        # if: failure() # run this step even if previous step failed
         with:
-          name: failure-videos
+          name: failure-screenshots
           path: |
-            docker/included-with-plugins-xpath-tryout/src/cypress/videos
-            docker/included-with-plugins-xpath-tryout/src/cypress/screenshots
+            docker\included-with-plugins-xpath-tryout\cypress\videos
+            docker\included-with-plugins-xpath-tryout\cypress\screenshots
