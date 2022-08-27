@@ -16,8 +16,9 @@ jobs:
           cd ../..
 
       - uses: actions/upload-artifact@v2
-        if: failure() || success() 
+        if: failure() || success()
         with:
           name: failure-troubleshoot
-          path: docker/cypress-docker-v10-xpath-tryout/cypress/screenshots
-          path: docker/cypress-docker-v10-xpath-tryout/cypress/videos
+          path: |
+            docker/cypress-docker-v10-xpath-tryout/cypress/screenshots
+            docker/cypress-docker-v10-xpath-tryout/cypress/videos
