@@ -14,3 +14,11 @@ jobs:
             npm i -d
             ./cy-run.sh --headed
           cd ../..
+
+
+      - uses: actions/upload-artifact@v2 # upload test results
+        if: failure() # run this step even if previous step failed
+        with:
+          name: failure-troubleshoot
+          path: docker/cypress-docker-v10-xpath-tryout/cypress/screenshots
+          path: docker/cypress-docker-v10-xpath-tryout/cypress/videos
