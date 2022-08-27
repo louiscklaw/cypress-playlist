@@ -10,9 +10,9 @@ beforeEach(() => {
   // runs before every test block
 });
 
-afterEach(() => {
-  // runs after each test block
-});
+// afterEach(() => {
+//   // runs after each test block
+// });
 
 after(() => {
   // runs once all tests are done
@@ -29,9 +29,9 @@ describe('test xpath', () => {
     cy.clearLocalStorage();
   });
 
-  afterEach(() => {
-    // runs after each test in the block
-  });
+  // afterEach(() => {
+  //   // runs after each test in the block
+  // });
 
   after(() => {
     // runs once after all tests in the block
