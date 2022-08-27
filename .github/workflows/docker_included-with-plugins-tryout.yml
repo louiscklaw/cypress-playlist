@@ -11,16 +11,13 @@ jobs:
       - name: test docker
         run: |
           cd docker/included-with-plugins-tryout
-            cd src
-              npm i -d
-            cd ..
-            bash ./test.sh
-          cd ../..
+            ./cy-run.sh --headed
+          cd ..
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: failure() || success()
         with:
-          name: failure-videos
+          name: failure-screenshots
           path: |
-            docker/included-with-plugins-tryout/src/cypress/videos
-            docker/included-with-plugins-tryout/src/cypress/screenshots
+            docker\included-with-plugins-tryout\cypress\videos
+            docker\included-with-plugins-tryout\cypress\screenshots
