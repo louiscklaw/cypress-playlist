@@ -1,4 +1,4 @@
-name: cypress-helloworld-tryout
+name: cypress-docker-v10-xpath-tryout
 
 on:
   push:
