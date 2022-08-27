@@ -15,7 +15,6 @@ jobs:
             ./cy-run.sh --headed
           cd ../..
 
-
       - uses: actions/upload-artifact@v2
         if: failure() || success() 
         with:
