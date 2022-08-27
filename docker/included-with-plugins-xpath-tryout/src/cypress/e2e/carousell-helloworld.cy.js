@@ -4,7 +4,7 @@ context('carousell', () => {
     cy.clearLocalStorage();
   });
 
-  it('helloworld ', { retries: 5 }, () => {
+  it('helloworld ', { retries: 3 }, () => {
     cy.visit('https://www.carousell.com.hk');
     cy.viewport(1920, 1080 * 10);
     cy.get('select', { timeout: 10000 }).should('be.visible');
