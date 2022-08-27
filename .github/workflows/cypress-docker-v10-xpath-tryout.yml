@@ -1,0 +1,16 @@
+name: cypress-helloworld-tryout
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: helloworld
+        run: |
+          cd docker/cypress-docker-v10-xpath-tryout
+            npm i -d
+            ./cy-fedora-run.sh
+          cd ../..
