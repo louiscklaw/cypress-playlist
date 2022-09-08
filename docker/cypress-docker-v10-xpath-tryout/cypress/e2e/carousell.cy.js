@@ -13,11 +13,7 @@ describe('test xpath', { retries: { runMode: 3, openMode: 1 } }, () => {
     cy.wait(1000);
   });
 
-  afterEach(() => {
-    cy.clearLocalStorage();
-    cy.clearCookies();
-    cy.wait(1000);
-  });
+  afterEach(() => {});
 
   it(`try search by thingiverse`, () => {
     cy.visit('https://www.carousell.com.hk');
