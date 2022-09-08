@@ -1,0 +1,24 @@
+name: cypress-docker-v10-xpath-tryout
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: helloworld
+        run: |
+          cd docker/cypress-docker-v10-xpath-tryout
+            npm i -d
+            ./cy-run.sh --headed --browser chrome
+          cd ../..
+
+      - uses: actions/upload-artifact@v2
+        if: failure() || success()
+        with:
+          name: failure-troubleshoot
+          path: |
+            docker/cypress-docker-v10-xpath-tryout/cypress/screenshots
+            docker/cypress-docker-v10-xpath-tryout/cypress/videos
