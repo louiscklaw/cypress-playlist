@@ -13,11 +13,14 @@ describe('test xpath', { retries: { runMode: 3, openMode: 1 } }, () => {
     cy.wait(1000);
   });
 
-  afterEach(() => {});
+  // afterEach(() => {});
 
   it(`try search by thingiverse`, () => {
+    cy.intercept('https://sentry.io/*', {});
     cy.visit('https://www.carousell.com.hk');
-    cy.viewport(1920, 1080 * 1);
+
+    // cy.viewport(1920, 1080 * 5);
+
     cy.screenshot();
   });
 });
