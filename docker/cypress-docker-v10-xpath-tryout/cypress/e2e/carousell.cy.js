@@ -19,8 +19,8 @@ describe('test xpath', { retries: { runMode: 3, openMode: 1 } }, () => {
     cy.intercept('https://sentry.io/*', {});
     cy.visit('https://www.carousell.com.hk');
 
-    // cy.viewport(1920, 1080 * 5);
+    cy.viewport(1920, 1080 * 10);
 
-    cy.screenshot();
+    cy.screenshot({ capture: 'viewport', overwrite: true });
   });
 });
