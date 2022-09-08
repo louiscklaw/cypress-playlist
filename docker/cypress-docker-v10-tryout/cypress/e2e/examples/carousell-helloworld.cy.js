@@ -1,10 +1,12 @@
 context('Actions', () => {
   beforeEach(() => {
-    cy.visit('https://www.carousell.com.hk')
-  })
+    cy.intercept('https://sentry.io/*', {});
+    cy.visit('https://www.carousell.com.hk');
+  });
 
   it('helloworld carousell', () => {
-    cy.log('helloworld')
-    cy.screenshot()
-  })
-})
+    cy.viewport(1920, 1080 * 10);
+
+    cy.screenshot({ capture: 'viewport', overwrite: true });
+  });
+});
