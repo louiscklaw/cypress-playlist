@@ -4,10 +4,10 @@
 
 context('example.com-helloworld', () => {
   beforeEach(() => {
-    cy.visit('https://www.example.com')
-  })
+    cy.visit('https://www.example.com');
+  });
 
   it('take screenshot', function () {
-    cy.screenshot()
-  })
-})
+    cy.screenshot();
+  });
+});

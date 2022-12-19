@@ -5,51 +5,51 @@ context('Actions', () => {
   // })
 
   it('helloworld cypress', () => {
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-  })
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+  });
   it('helloworld cypress', () => {
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-  })
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+  });
   it('helloworld cypress', () => {
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-  })
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+  });
   it('helloworld cypress', () => {
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-  })
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+  });
   it('helloworld cypress', () => {
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-  })
-})
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+  });
+});
 
 context('Actions 1', () => {
   // beforeEach(() => {
@@ -58,48 +58,48 @@ context('Actions 1', () => {
   // })
 
   it('helloworld cypress', () => {
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-  })
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+  });
   it('helloworld cypress', () => {
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-  })
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+  });
   it('helloworld cypress', () => {
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-  })
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+  });
   it('helloworld cypress', () => {
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-  })
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+  });
   it('helloworld cypress', () => {
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-    cy.log('helloworld')
-  })
-})
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+    cy.log('helloworld');
+  });
+});

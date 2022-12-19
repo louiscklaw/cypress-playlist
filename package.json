@@ -1,0 +1,25 @@
+{
+  "name": "cypress-playlist",
+  "version": "1.0.0",
+  "description": "https://louiscklaw.github.io/cypress-playlist/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --loglevel warn --write \"**/*.{js,css,html,jsx,tsx,ts,json}\"",
+    "gitUpdate": "git add . && git commit -m \"update root,\" && git pull && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louiscklaw/cypress-playlist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/louiscklaw/cypress-playlist/issues"
+  },
+  "homepage": "https://github.com/louiscklaw/cypress-playlist#readme",
+  "dependencies": {
+    "prettier": "^2.8.1"
+  }
+}
