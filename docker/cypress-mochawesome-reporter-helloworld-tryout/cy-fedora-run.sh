@@ -10,6 +10,8 @@ DISPLAY=:1
 
 xhost local:
 
+yarn -d
+
 # explanation of the "docker run" command line arguments
 #
 #  -it          = interactive terminal
