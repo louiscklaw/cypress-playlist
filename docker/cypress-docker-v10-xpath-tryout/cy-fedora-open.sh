@@ -21,11 +21,16 @@ xhost local:
 #     with arguments AFTER Docker image name
 #     in our case they are "--project ." to point globally installed Cypress
 #     at the current working directory /e2e inside the container
-docker run -it \
+
+
+# install dependcies
+yarn -d
+
+docker run -it --rm \
   -u 1000:1000 \
-  -v $PWD:/e2e \
-  -v /tmp/.X11-unix:/tmp/.X11-unix \
-  -w /e2e \
   -e DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -v $PWD:/e2e \
+  -w /e2e \
   --entrypoint cypress \
   cypress/included:10.11.0 open --project .
