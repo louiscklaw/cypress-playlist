@@ -1,0 +1,17 @@
+{
+  "name": "helloworld-tryout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gitUpdate": "git add . && git commit -m \"update mochawesome-helloworld-tryout,\" && git pull && git push"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3"
+  }
+}
