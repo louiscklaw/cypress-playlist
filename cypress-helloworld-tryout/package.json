@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker_rebuild": "docker compose up -d --build",
-    "into_cy_chrome": "docker compose run -t cy_chrome cypress run"
+    "into_cy_chrome": "docker compose run -t cy_chrome cypress run",
+    "gitUpdate": "git add . && git commit -m \"update cypress-helloworld-tryout,\" && git pull && git push"
   },
   "repository": {
     "type": "git",
