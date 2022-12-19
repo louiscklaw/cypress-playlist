@@ -19,7 +19,7 @@ DISPLAY=:0
 #     with arguments AFTER Docker image name
 #     in our case they are "--project ." to point globally installed Cypress
 #     at the current working directory /e2e inside the container
-docker run -it \
+docker run -it --rm \
   -u 1000:1000 \
   -v $PWD:/e2e \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
