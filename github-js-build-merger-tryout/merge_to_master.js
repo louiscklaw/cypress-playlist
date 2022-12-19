@@ -6,11 +6,11 @@ const WORKING_DIR = process.env.GITHUB_WORKSPACE;
 
 const result = child_process.execSync('cd', { encoding: 'utf8', cwd: WORKING_DIR });
 
-const checkoutBranch = async (branchName) => {
+const checkoutBranch = async branchName => {
   return child_process.execSync(`git checkout ${branchName}`, { encoding: 'utf8', cwd: WORKING_DIR });
 };
 
-const mergeBranch = async (branchToMerge) => {
+const mergeBranch = async branchToMerge => {
   return child_process.execSync(`git merge ${branchToMerge} --ff-only`, { encoding: 'utf8', cwd: WORKING_DIR });
 };
 
@@ -19,14 +19,14 @@ const checkBranchName = async () => {
   return temp.match(/\* (.*)/)[1];
 };
 
-const checkIfTestBranch = (name_to_test) => name_to_test.match(/test.*/)?.length > 0;
+const checkIfTestBranch = name_to_test => name_to_test.match(/test.*/)?.length > 0;
 
 const pushBranch = async () => {
   let temp = await child_process.execSync(`git push`, { encoding: 'utf8', cwd: WORKING_DIR });
   return temp;
 };
 
-const switchBranch = async (branch) => {
+const switchBranch = async branch => {
   let temp = await child_process.execSync(`git switch ${branch}`, { encoding: 'utf8', cwd: WORKING_DIR });
   return temp;
 };
