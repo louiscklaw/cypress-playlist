@@ -6,7 +6,7 @@
 # IP=$(ipconfig getifaddr en0)
 # this assumes that X11 server allows connections over the network
 # after we execute "/usr/X11/bin/xhost + $IP"
-DISPLAY=:0
+DISPLAY=:1
 
 xhost local:
 
@@ -22,9 +22,11 @@ xhost local:
 #     in our case they are "--project ." to point globally installed Cypress
 #     at the current working directory /e2e inside the container
 
+npm i -D
+
 docker run -it \
   -u 1000:1000 \
-  -v $PWD:/e2e \
+  -v ./:/e2e \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -w /e2e \
   -e DISPLAY \
